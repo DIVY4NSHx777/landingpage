@@ -1,11 +1,5 @@
 #  Landing Page
 
-## 🚀 Features
-
-- 🎨 **Modern UI** - Clean, responsive design with Tailwind CSS
-- ✨ **Animation** - Smooth animations using Framer Motion
-
-
 ##  Components
 
 - **Hero Section** - Eye-catching introduction with animated background
