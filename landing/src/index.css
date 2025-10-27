@@ -40,6 +40,16 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+.hero-bg {
+  background-image: url('/herobg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.footer-bg {
+  background-image: url('/footerbg.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 :root {
   --radius: 0.625rem;

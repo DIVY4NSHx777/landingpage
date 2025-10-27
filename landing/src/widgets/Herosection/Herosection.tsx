@@ -17,7 +17,7 @@ export default function HeroSection() {
         </nav>
       </header>
 
-      <section className="flex flex-col items-center justify-center text-center min-h-screen bg-linear-gradient-to-b from-rose-50 to-white px-6 pt-24">
+      <section className="flex flex-col items-center justify-center text-center min-h-screen bg-linear-gradient-to-b from-rose-50 to-white px-6 pt-24 hero-bg">
         <h1 className="text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
           Hero Section
         </h1>

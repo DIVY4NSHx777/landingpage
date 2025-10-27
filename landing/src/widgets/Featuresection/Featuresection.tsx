@@ -2,7 +2,7 @@ import {Card,CardHeader,CardContent,CardFooter} from "@/components/ui/card"
 import { Zap ,Sparkle,Settings2} from "lucide-react"
 export default function Featuresection() {
     return (
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 ">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex flex-col items-center justify-center text-center">
                     <h2 className="text-4xl font-bold mb-6">Features</h2>
