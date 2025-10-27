@@ -1,6 +1,11 @@
 import {Card,CardHeader,CardContent,CardFooter} from "@/components/ui/card"
 import { Zap ,Sparkle,Settings2} from "lucide-react"
+import { motion } from "framer-motion";
+
 export default function Featuresection() {
+   const MotionZap=motion(Zap)
+   const MotionSparkle=motion(Sparkle)
+   const MotionSettings2=motion(Settings2)
     return (
         <section className="py-16 md:py-24 ">
             <div className="max-w-6xl mx-auto px-6">
@@ -15,8 +20,26 @@ export default function Featuresection() {
                     <Card>
                         <CardHeader className="pb-3 flex items-center justify-center">
                             
-                            <Zap className=" size-12 "/>
-                            
+                            <MotionZap
+                                size={36}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{
+                                    opacity: 1,
+                                    y: 0,
+                                }}
+                                transition={{
+                                    duration: 1.5,
+                                    repeat: Infinity,
+                                    repeatType: "reverse"
+                                }}
+                                whileHover={{
+                                    scale: 1.25,
+                                    rotate: 8,
+                                    color:"blue"
+                                    }}
+                                fill=" yellow"
+                                    className="text-yellow-500"
+                                /> 
                         </CardHeader>
                         <CardContent>
                             <p>Lorem, ipsum dolor.</p>
@@ -27,7 +50,19 @@ export default function Featuresection() {
                     </Card>
                     <Card>
                         <CardHeader className="pb-3 flex items-center justify-center">
-                            <Settings2 className=" size-12 "/>
+                            <MotionSettings2
+                            size={40}
+                            className="text-yellow-400"
+                            whileHover={{
+                                scale: 1.25,
+                                
+                            }}
+                            transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                                repeatType: "reverse"
+                            }}
+                            />
                         </CardHeader>
                         <CardContent>
                             <p>Lorem ipsum dolor sit amet.</p>
@@ -38,7 +73,19 @@ export default function Featuresection() {
                     </Card>
                     <Card>
                         <CardHeader className="pb-3 flex items-center justify-center">
-                            <Sparkle className=" size-12 "/>
+                            <MotionSparkle
+                            size={40}
+                            className="text-yellow-400"
+                            whileHover={{
+                                scale: 1.1,
+                                
+                            }}
+                             transition={{
+                                    duration: 1.5,
+                                    repeat: Infinity,
+                                    repeatType: "reverse"
+                                }}
+                            />
                         </CardHeader>
                         <CardContent>
                             <p>Lorem ipsum dolor sit amet.</p>
