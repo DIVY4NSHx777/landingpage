@@ -1,56 +1,42 @@
 import { Instagram, Twitter, Linkedin } from "lucide-react";
+import links from "./Links";
+import { Link } from "react-router-dom";
 export default function Footer() {
     return (
-        <footer className="py-16 md:py-24 footer-bg ">
-            <div className="max-w-6xl mx-auto px-6">
-                
-                <div className="text-center mb-10">
-                    <h2 className="text-4xl font-bold mb-4">Footer</h2>
-                    <p className="text-lg text-gray-600 max-w-xl mx-auto">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ab?
-                    </p>
+        <footer className="py-16 md:py-32 footer-bg ">
+            <div className="max-w-5xl mx-auto px-6">
+                <div className="grid gap-12  md:grid-cols-4">
+                    <div className="md:col-span-2">
+                        <h2 className="text-2xl font-bold mb-6">Aurora</h2>
+                        <p className="text-lg text-gray-600 mb-4">
+                             Aurora helps brands measure and grow their visibility inside AI search engines.
+                            The next evolution of SEO — from keyword ranking to decision-stage influence.
+                        </p>
+                    </div>
+                    <div className="md:col-span-2 md:ml-18 grid grid-cols-3 gap-6">
+                       {links.map((link, index) => (
+                            <div
+                                key={index}
+                                className="space-y-4">
+                                <span className="block font-medium">{link.group}</span>
+                                {link.items.map((item, index) => (
+                                    <Link
+                                        key={index}
+                                        to={item.href}
+                                        className="text-muted-foreground hover:text-primary block duration-150">
+                                        <span>{item.title}</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        ))}
+                    </div> 
                 </div>
-
-                <div className="flex flex-wrap justify-center gap-10 text-sm">
-                    <div>
-                        <h3 className="font-semibold text-lg mb-3">Company</h3>
-                        <ul className="space-y-2 text-gray-600">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
+                <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t-2 py-3">
+                    <p className="text-lg text-gray-600">© {new Date().getFullYear()} Aurora. All rights reserved.</p>
+                    <div className="flex items-center justify-end gap-6">
+                        <Instagram className="hover:text-rose-500"/>
+                        <Linkedin className="hover:text-blue-500"/>
                     </div>
-
-                    <div>
-                        <h3 className="font-semibold text-lg mb-3">Support</h3>
-                        <ul className="space-y-2 text-gray-600">
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Terms & Privacy</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
-                        <ul className="space-y-2 text-gray-600">
-                            <li className="flex items-center gap-2">
-                                <Instagram/>
-                                <a href="#">Instagram</a>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <Twitter/>
-                                <a href="#">Twitter</a>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <Linkedin/>
-                                <a href="#">LinkedIn</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="text-center mt-12 text-gray-400">
-                    <p>{new Date().getFullYear()} Your Company. All rights reserved.</p>
                 </div>
 
             </div>

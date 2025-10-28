@@ -44,7 +44,7 @@ export default function HeroSection() {
     }}
       initial="hidden"
       animate="visible"
-      className="flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-24 hero-bg ">
+      className="flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-8 hero-bg ">
         <motion.h1 className="text-6xl font-semibold bg-gradient-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
             initial={{ opacity: 0, filter:"blur(12px)" }}
             animate={{ opacity: 1, filter:"blur(0px)" }}
