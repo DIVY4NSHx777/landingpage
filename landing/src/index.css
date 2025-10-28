@@ -50,6 +50,11 @@
   background-size: cover;
   background-position: center;
 }
+.feature-bg {
+  background-image: url('/featurebg.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 :root {
   --radius: 0.625rem;

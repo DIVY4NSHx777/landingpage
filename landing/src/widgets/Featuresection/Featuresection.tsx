@@ -7,8 +7,28 @@ export default function Featuresection() {
    const MotionSparkle=motion(Sparkle)
    const MotionSettings2=motion(Settings2)
     return (
-        <section className="py-16 md:py-24 ">
-            <div className="max-w-6xl mx-auto px-6">
+        <motion.section 
+            variants={{
+        hidden: {
+          opacity: 0,
+          y: 20,
+          filter:"blur(12px)"
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          filter:"blur(0px)",
+          transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 2
+          }
+            }   
+        }}
+      initial="hidden"
+      animate="visible"
+        className="py-16 md:py-48 feature-bg">
+            <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col items-center justify-center text-center">
                     <h2 className="text-4xl font-bold mb-6">Features</h2>
                     <p className="text-lg text-gray-600 mb-12">
@@ -96,6 +116,6 @@ export default function Featuresection() {
                     </Card>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

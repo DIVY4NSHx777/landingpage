@@ -1,42 +1,81 @@
 import {Button} from "@/components/ui/button"
+import {motion} from "framer-motion"
 export default function HeroSection() {
   return (
     <>
       
-      <header className="w-full py-4 bg-white shadow-sm fixed top-0 left-0 z-50">
+      <header className="w-full py-4 bg-blur backdrop-blur-sm shadow-sm fixed top-0 left-0 z-50">
         <nav className="max-w-6xl mx-auto flex items-center justify-between px-6">
-          <h1 className="text-2xl font-bold text-rose-600">Landing</h1>
+          <h1 className="text-2xl font-bold text-rose-600">Aurora</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
             <li className="hover:text-rose-600 cursor-pointer transition">Features</li>
             <li className="hover:text-rose-600 cursor-pointer transition">Solutions</li>
             <li className="hover:text-rose-600 cursor-pointer transition">Pricing</li>
           </ul>
-          <Button className="bg-rose-600 text-white hover:bg-rose-700 transition">
-            Get a Demo
+          <div className="flex gap-2">
+            <Button className=" bg-rose-600 text-white hover:bg-rose-700 transition">
+            Login
           </Button>
+           <Button
+            className="bg-transparent text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-6 py-3 transition">
+            Sign Up
+          </Button>
+          </div>
         </nav>
       </header>
 
-      <section className="flex flex-col items-center justify-center text-center min-h-screen bg-linear-gradient-to-b from-rose-50 to-white px-6 pt-24 hero-bg">
-        <h1 className="text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
-          Hero Section
-        </h1>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae odit voluptatum illum totam eos iure exercitationem aperiam tenetur saepe voluptas autem harum aliquam, dolorum aliquid. Sunt ratione sapiente ducimus at.
-        </p>
+      <motion.section 
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 20,
+          filter:"blur(12px)"
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          filter:"blur(0px)",
+          transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 2
+          }
+        }   
+    }}
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-24 hero-bg ">
+        <motion.h1 className="text-6xl font-semibold bg-gradient-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
+            initial={{ opacity: 0, filter:"blur(12px)" }}
+            animate={{ opacity: 1, filter:"blur(0px)" }}
+            transition={{ delay:0.2, duration: 1 }}
+        >
+          Own your presence in the age of AI answers.
+        </motion.h1>
+        <motion.p className="text-lg bg-gradient-to-tr from-[#FC5C7D] to-[#6A82FB]  bg-clip-text text-transparent mb-8 max-w-2xl"
+            initial={{ opacity: 0, filter:"blur(10px)" }}
+            animate={{ opacity: 1, filter:"blur(0px)" }}
+            transition={{ delay:0.4, duration: 1.5 }}
+        >
+          Aurora helps brands track how they appear — and influence — inside ChatGPT, Perplexity, Gemini, and other AI engines.
+            Know when you’re mentioned, how you’re represented, and what drives conversion decisions.
+        </motion.p>
 
-        <div className="flex gap-4">
+        <motion.div 
+            initial={{ opacity: 0, filter:"blur(8px)" }}
+            animate={{ opacity: 1, filter:"blur(0px)" }}
+            transition={{ delay:0.6, duration: 1.5 }}
+            className="flex gap-4">
           <Button className="bg-rose-600 text-white px-6 py-3 hover:bg-rose-700 transition">
-            Get Started
+            Request Early Access
           </Button>
           <Button
-            variant="outline"
-            className="border-rose-600 text-rose-600 hover:bg-rose-50 px-6 py-3 transition"
+            className=" bg-transparent text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-6 py-3 transition"
           >
-            Learn More
+            See Demo
           </Button>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </>
   );
 }
