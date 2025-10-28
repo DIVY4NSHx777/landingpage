@@ -2,6 +2,8 @@ import {Button} from "@/components/ui/button"
 import {motion} from "framer-motion"
 import { ArrowRight, ChevronRight} from "lucide-react";
 import { useState } from "react";
+import BottonTransition from "./BottonTransition";
+import TopTransition from "./TopTransition";
 export default function HeroSection() {
     const [hovered, setHovered] = useState(false);
   return (
@@ -28,69 +30,75 @@ export default function HeroSection() {
       </header>
 
       <motion.section 
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 20,
-          filter:"blur(12px)"
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          filter:"blur(0px)",
-          transition: {
-            type: "spring",
-            bounce: 0.4,
-            duration: 2
-          }
-        }   
-    }}
-      initial="hidden"
-      animate="visible"
-      className="flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-8 hero-bg ">
-        <motion.h1 className="text-6xl font-semibold bg-gradient-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
-            initial={{ opacity: 0, filter:"blur(12px)" }}
-            animate={{ opacity: 1, filter:"blur(0px)" }}
-            transition={{ delay:0.2, duration: 1 }}
-        >
-          Own your presence in the age of AI answers.
-        </motion.h1>
-        <motion.p className="text-lg bg-gradient-to-tr from-[#FC5C7D] to-[#6A82FB]  bg-clip-text text-transparent mb-8 max-w-2xl"
-            initial={{ opacity: 0, filter:"blur(10px)" }}
-            animate={{ opacity: 1, filter:"blur(0px)" }}
-            transition={{ delay:0.4, duration: 1.5 }}
-        >
-          Aurora helps brands track how they appear — and influence — inside ChatGPT, Perplexity, Gemini, and other AI engines.
-            Know when you’re mentioned, how you’re represented, and what drives conversion decisions.
-        </motion.p>
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 20,
+                  filter:"blur(12px)"
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  filter:"blur(0px)",
+                  transition: {
+                    type: "spring",
+                    bounce: 0.4,
+                    duration: 2
+                  }
+                }   
+            }}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-8 bg-gradient-to-tr from-[#ffdde1] to-white  ">
 
-        <motion.div 
-            initial={{ opacity: 0, filter:"blur(8px)" }}
-            animate={{ opacity: 1, filter:"blur(0px)" }}
-            transition={{ delay:0.6, duration: 1.5 }}
-            className="flex gap-5">
-          <motion.button
-            className=" flex items-center gap-2  bg-rose-600 text-white hover:bg-rose-700  px-3 py-2 transition rounded-3xl"
-            onHoverStart={() => setHovered(true)}
-            onHoverEnd={() => setHovered(false)}
-          >
-              Request Early Access
-            <motion.div
-              key={hovered ? "arrow" : "chevron"}
-              initial={{ opacity: 0, x: -4 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 4 }}
-              transition={{duration:0.2,ease:"easeOut"}}
+            <TopTransition/>
+
+            <motion.h1 className="text-6xl font-semibold bg-gradient-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
+                initial={{ opacity: 0, filter:"blur(12px)" }}
+                animate={{ opacity: 1, filter:"blur(0px)" }}
+                transition={{ delay:0.2, duration: 1 }}
             >
-              {hovered ? <ArrowRight size={18} /> : <ChevronRight size={18} />}
-            </motion.div>
-          </motion.button>
-          <Button
-            className=" bg-transparent text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-3 py-2 transition rounded-3xl"
-          >
-            See Demo
-          </Button>
-        </motion.div>
+              Own your presence in the age of AI answers.
+            </motion.h1>
+            <motion.p className="text-lg bg-gradient-to-tr from-[#FC5C7D] to-[#6A82FB]  bg-clip-text text-transparent mb-8 max-w-2xl"
+                initial={{ opacity: 0, filter:"blur(10px)" }}
+                animate={{ opacity: 1, filter:"blur(0px)" }}
+                transition={{ delay:0.4, duration: 1.5 }}
+            >
+              Aurora helps brands track how they appear — and influence — inside ChatGPT, Perplexity, Gemini, and other AI engines.
+                Know when you’re mentioned, how you’re represented, and what drives conversion decisions.
+            </motion.p>
+
+              <motion.div 
+                    initial={{ opacity: 0, filter:"blur(8px)" }}
+                    animate={{ opacity: 1, filter:"blur(0px)" }}
+                    transition={{ delay:0.6, duration: 1.5 }}
+                    className="flex gap-5 ">
+                  <motion.button
+                      className=" flex items-center gap-2 text-sm font-medium h-10  bg-rose-600 text-white hover:bg-rose-500  px-3 py-2 transition rounded-3xl"
+                      onHoverStart={() => setHovered(true)}
+                      onHoverEnd={() => setHovered(false)}
+                    >
+                        Request Early Access
+                      <motion.div
+                          key={hovered ? "arrow" : "chevron"}
+                          initial={{ opacity: 0, x: -4 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 4 }}
+                          transition={{duration:0.2,ease:"easeOut"}}
+                        >
+                          {hovered ? <ArrowRight size={18} /> : <ChevronRight size={18} />}
+                      </motion.div>
+                  </motion.button>
+                  <Button
+                    className=" flex items-center gap-2 bg-transparent text-sm font-medium h-10 text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-3 py-2 transition rounded-3xl"
+                  >
+                    See Demo
+                    
+                  </Button>
+              </motion.div>
+
+                 <BottonTransition/>
       </motion.section>
     </>
   );
