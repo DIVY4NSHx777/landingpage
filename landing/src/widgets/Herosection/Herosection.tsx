@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight} from "lucide-react";
 import { useState } from "react";
 import BottonTransition from "./BottonTransition";
 import TopTransition from "./TopTransition";
+import LandingDashboard from "./LandingDashboard/LandingDashboard";
 export default function HeroSection() {
     const [hovered, setHovered] = useState(false);
   return (
@@ -49,7 +50,7 @@ export default function HeroSection() {
             }}
               initial="hidden"
               animate="visible"
-              className="flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-8 bg-gradient-to-tr from-[#ffdde1] to-white  ">
+              className="relative flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-8   ">
 
             <TopTransition/>
 
@@ -99,6 +100,7 @@ export default function HeroSection() {
               </motion.div>
 
                  <BottonTransition/>
+                 <LandingDashboard/>
       </motion.section>
     </>
   );

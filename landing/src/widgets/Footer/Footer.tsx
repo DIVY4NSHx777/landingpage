@@ -3,7 +3,7 @@ import links from "./Links";
 import { Link } from "react-router-dom";
 export default function Footer() {
     return (
-        <footer className="py-16 md:py-32 footer-bg ">
+        <footer className="py-16 md:py-32">
             <div className="max-w-5xl mx-auto px-6">
                 <div className="grid gap-12  md:grid-cols-4">
                     <div className="md:col-span-2">

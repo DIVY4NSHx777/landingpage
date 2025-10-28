@@ -27,7 +27,7 @@ export default function Featuresection() {
         }}
       initial="hidden"
       animate="visible"
-        className="py-16 md:py-48">
+        className="py-16 md:py-48 bg">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col items-center justify-center text-center">
                     <h2 className="text-4xl font-bold mb-6">Features</h2>
