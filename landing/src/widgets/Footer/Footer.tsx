@@ -1,3 +1,4 @@
+import { Instagram, Twitter, Linkedin } from "lucide-react";
 export default function Footer() {
     return (
         <footer className="py-16 md:py-24 footer-bg ">
@@ -32,15 +33,24 @@ export default function Footer() {
                     <div>
                         <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
                         <ul className="space-y-2 text-gray-600">
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">LinkedIn</a></li>
+                            <li className="flex items-center gap-2">
+                                <Instagram/>
+                                <a href="#">Instagram</a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <Twitter/>
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <Linkedin/>
+                                <a href="#">LinkedIn</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="text-center mt-12 text-gray-400">
-                    <p>© {new Date().getFullYear()} Your Company. All rights reserved.</p>
+                    <p>{new Date().getFullYear()} Your Company. All rights reserved.</p>
                 </div>
 
             </div>
