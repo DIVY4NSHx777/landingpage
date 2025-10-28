@@ -1,6 +1,9 @@
 import {Button} from "@/components/ui/button"
 import {motion} from "framer-motion"
+import { ArrowRight, ChevronRight} from "lucide-react";
+import { useState } from "react";
 export default function HeroSection() {
+    const [hovered, setHovered] = useState(false);
   return (
     <>
       
@@ -65,12 +68,25 @@ export default function HeroSection() {
             initial={{ opacity: 0, filter:"blur(8px)" }}
             animate={{ opacity: 1, filter:"blur(0px)" }}
             transition={{ delay:0.6, duration: 1.5 }}
-            className="flex gap-4">
-          <Button className="bg-rose-600 text-white px-6 py-3 hover:bg-rose-700 transition">
-            Request Early Access
-          </Button>
+            className="flex gap-5">
+          <motion.button
+            className=" flex items-center gap-2  bg-rose-600 text-white hover:bg-rose-700  px-3 py-2 transition rounded-3xl"
+            onHoverStart={() => setHovered(true)}
+            onHoverEnd={() => setHovered(false)}
+          >
+              Request Early Access
+            <motion.div
+              key={hovered ? "arrow" : "chevron"}
+              initial={{ opacity: 0, x: -4 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 4 }}
+              transition={{duration:0.2,ease:"easeOut"}}
+            >
+              {hovered ? <ArrowRight size={18} /> : <ChevronRight size={18} />}
+            </motion.div>
+          </motion.button>
           <Button
-            className=" bg-transparent text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-6 py-3 transition"
+            className=" bg-transparent text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-3 py-2 transition rounded-3xl"
           >
             See Demo
           </Button>
