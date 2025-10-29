@@ -12,18 +12,21 @@ export default function HeroSection() {
       
       <header className="w-full py-2 bg-blur backdrop-blur-sm shadow-sm fixed top-0 left-0 z-50">
         <nav className="max-w-6xl mx-auto flex items-center justify-between px-6">
-          <h1 className="text-2xl font-bold text-rose-600">Aurora</h1>
-          <ul className="flex gap-6 text-gray-700 font-medium">
-            <li className="text-muted-foreground hover:text-slate-100">Features</li>
-            <li className="hover:text-rose-600 cursor-pointer transition">Solutions</li>
-            <li className="hover:text-rose-600 cursor-pointer transition">Pricing</li>
+          <h1 className="text-2xl font-bold bg-gradientHeading bg-clip-text text-transparent">Aurora</h1>
+          <ul className="flex gap-6 text-primary-foreground font-medium">
+            <li className="text-primary-foreground hover:text-muted-foreground cursor-pointer">Features</li>
+            <li className="text-primary-foreground hover:text-muted-foreground cursor-pointer">Solutions</li>
+            <li className="text-primary-foreground hover:text-muted-foreground cursor-pointer">Pricing</li>
           </ul>
           <div className="flex gap-2">
-            <Button className=" bg-rose-600 text-white hover:bg-rose-700 transition">
+            <Button   variant="outline" size="sm">
             Login
           </Button>
            <Button
-            className="bg-transparent text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-6 py-3 transition">
+            variant="outline"
+            size="sm"
+            className="bg-primary text-secondary border-primary hover:bg-primary hover:text-secondary">
+              
             Sign Up
           </Button>
           </div>
@@ -54,14 +57,14 @@ export default function HeroSection() {
 
             <TopTransition/>
 
-            <motion.h1 className="text-6xl font-semibold bg-linear-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
+            <motion.h1 className="text-6xl font-semibold text-secondary mb-4 leading-tight max-w-3xl mx-auto bg-gradientHeading bg-clip-text text-transparent"
                 initial={{ opacity: 0, filter:"blur(12px)" }}
                 animate={{ opacity: 1, filter:"blur(0px)" }}
                 transition={{ delay:0.2, duration: 1 }}
             >
               Own your presence in the age of AI answers.
             </motion.h1>
-            <motion.p className="text-lg bg-linear-to-tr from-[#FC5C7D] to-[#6A82FB]  bg-clip-text text-transparent mb-8 max-w-2xl"
+            <motion.p className="text-lg text-secondary mb-8 max-w-2xl bg-gradientHeading bg-clip-text text-transparent"
                 initial={{ opacity: 0, filter:"blur(10px)" }}
                 animate={{ opacity: 1, filter:"blur(0px)" }}
                 transition={{ delay:0.4, duration: 1.5 }}
@@ -76,7 +79,7 @@ export default function HeroSection() {
                     transition={{ delay:0.6, duration: 1.5 }}
                     className="flex gap-5 ">
                   <motion.button
-                      className=" flex items-center gap-2 text-sm font-medium h-10  bg-rose-600 text-white hover:bg-rose-500  px-3 py-2 transition rounded-3xl"
+                      className=" flex items-center gap-2 text-sm font-medium text-secondary hover:bg-accent hover:text-accent-foreground px-3 py-2 transition rounded-3xl"
                       onHoverStart={() => setHovered(true)}
                       onHoverEnd={() => setHovered(false)}
                     >
@@ -92,7 +95,7 @@ export default function HeroSection() {
                       </motion.div>
                   </motion.button>
                   <Button
-                    className=" flex items-center gap-2 bg-transparent text-sm font-medium h-10 text-rose-600 hover:bg-rose-100 hover:text-rose-600 px-3 py-2 transition rounded-3xl"
+                      className=" flex items-center gap-2 text-sm font-medium text-secondary hover:bg-accent hover:text-accent-foreground px-3 py-2 transition rounded-3xl"
                   >
                     See Demo
                     
