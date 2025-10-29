@@ -4,7 +4,7 @@ import { ArrowRight, ChevronRight} from "lucide-react";
 import { useState } from "react";
 import BottonTransition from "./Transitions/BottonTransition";
 import TopTransition from "./Transitions/TopTransition";
-import LandingDashboard from "./LandingDashboard/LandingDashboard";
+
 export default function HeroSection() {
     const [hovered, setHovered] = useState(false);
   return (
@@ -19,16 +19,15 @@ export default function HeroSection() {
             <li className="text-primary-foreground hover:text-muted-foreground cursor-pointer">Pricing</li>
           </ul>
           <div className="flex gap-2">
-            <Button   variant="outline" size="sm">
+            <Button size="sm" className="bg-backdrop">
             Login
           </Button>
            <Button
-            variant="outline"
-            size="sm"
-            className="bg-primary text-secondary border-primary hover:bg-primary hover:text-secondary">
-              
-            Sign Up
-          </Button>
+                className=" flex items-center gap-2 text-sm font-medium text-primary bg-accent px-3 py-2 transition rounded-3xl"
+            >
+                    See Demo
+                    
+            </Button>
           </div>
         </nav>
       </header>
@@ -101,15 +100,16 @@ export default function HeroSection() {
                       </motion.div>
                   </motion.button>
                   <Button
-                      className=" flex items-center gap-2 text-sm font-medium text-secondary bg-backdrop hover:bg-accent hover:text-accent-foreground px-3 py-2 transition rounded-3xl"
+                      className=" flex items-center gap-2 text-sm font-medium text-primary bg-accent px-3 py-2 transition rounded-3xl"
                   >
                     See Demo
                     
                   </Button>
               </motion.div>
-
                  <BottonTransition/>
-                 <LandingDashboard/>
+                 <div className="w-max h-max max-w-2xl mt-8">
+                    <img src="/dashboard (1).webp" alt="" />
+                 </div>
       </motion.section>
     </>
   );

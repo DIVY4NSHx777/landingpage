@@ -1,12 +1,14 @@
 import Herosection from '../widgets/Herosection/Herosection'
-import Featuresection from '../widgets/Featuresection/Featuresection'
+// import Featuresection from '../widgets/Featuresection/Featuresection'
 import Footer from '../widgets/Footer/Footer'
 import Testimonials from '../widgets/Testimonials/Testimonials'
+import ProblemSection from '../widgets/ProblemSection/ProblemSection'
 export default function Home() {
     return (
-        <div className="bg-gradientDark">
+        <div className="bg-foreground">
             <Herosection />
-            <Featuresection />
+            {/* <Featuresection /> */}
+            <ProblemSection />
             <Testimonials />
             <Footer />
         </div>

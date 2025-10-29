@@ -13,7 +13,7 @@ export default function BottonTransition() {
     <defs>
       
       <linearGradient id="flowGradientTall" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#FFB3C1">
+        <stop offset="0%" stopColor="#ADA996">
           <animate 
           attributeName="offset" 
           values="0;1;0" 
@@ -21,7 +21,7 @@ export default function BottonTransition() {
           repeatCount="indefinite" />
         </stop>
 
-        <stop offset="33%" stopColor="#C8A2FF">
+        <stop offset="33%" stopColor="#F2F2F2">
           <animate 
           attributeName="offset" 
           values="0.33;0.66;0.33" 
@@ -29,7 +29,7 @@ export default function BottonTransition() {
           repeatCount="indefinite" />
         </stop>
 
-        <stop offset="66%" stopColor="#A8FFE0">
+        <stop offset="66%" stopColor="#DBDBDB">
           <animate 
             attributeName="offset" 
             values="0.66;1;0.66" 
@@ -37,7 +37,7 @@ export default function BottonTransition() {
             repeatCount="indefinite" />
         </stop>
 
-        <stop offset="100%" stopColor="#B3C8FF">
+        <stop offset="100%" stopColor="#EAEAEA">
           <animate 
           attributeName="offset" 
           values="1;0;1" 

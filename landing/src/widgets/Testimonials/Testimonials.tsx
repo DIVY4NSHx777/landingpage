@@ -5,13 +5,13 @@ export default function Testimonials(){
         <section className="py-16 md:py-32">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex flex-col items-center justify-center text-center">
-                    <h2 className="text-4xl font-bold mb-6">Testimonials</h2>
-                    <p className="text-lg text-gray-600 mb-12">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, ab?
+                    <h2 className="text-4xl text-secondary font-bold mb-6">You’re winning on Google.</h2>
+                    <p className="text-lg text-secondary mb-12">
+                        But invisible inside AI answers.
                     </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
-                    <Card className="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
+                    <Card className="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2 ">
                         <CardHeader>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </CardHeader>

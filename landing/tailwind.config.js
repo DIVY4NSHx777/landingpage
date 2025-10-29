@@ -30,7 +30,8 @@ export default {
       },
       backgroundImage: {
         hero:"url('/pexels-cottonbro-9665185.jpg')",
-        gradientHeading: 'linear-gradient(to top right, #FC466B, #3F5EFB)',
+        gradientHeading: 'linear-gradient(to right, #ADA996,#F2F2F2,#DBDBDB,#EAEAEA )',
+        gradientProblemCards: 'linear-gradient(to top left, #0f0c29,#302b63,#24243e )',
         gradientDark: 'linear-gradient(to top right, #000000, #232526)',
         gradientDarkReverse: 'linear-gradient(to right, #434343, #000000)',
         gradientDarkTransparent: 'linear-gradient(to right, #000000, #43434380)',
