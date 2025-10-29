@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function BottonTransition() {
     return  <motion.svg
     width="325"
-    height="1100"
+    height="1000"
     viewBox="0 0 525 832"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -47,14 +47,20 @@ export default function HeroSection() {
                   transition: {
                     type: "spring",
                     bounce: 0.4,
-                    duration: 2
+                    duration: 8
                   }
                 }   
             }}
               initial="hidden"
               animate="visible"
               className="relative flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-32 md:pt-40 lg:pt-48   ">
-
+                <motion.div
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.2, duration: 1.6, ease: "easeOut" }}
+                  className="absolute inset-0 bg-hero bg-cover bg-center"
+                  style={{ zIndex: -1 }}
+                />
             <TopTransition/>
 
             <motion.h1 className="text-6xl font-semibold text-secondary mb-4 leading-tight max-w-3xl mx-auto bg-gradientHeading bg-clip-text text-transparent"
@@ -76,7 +82,7 @@ export default function HeroSection() {
               <motion.div 
                     initial={{ opacity: 0, filter:"blur(8px)" }}
                     animate={{ opacity: 1, filter:"blur(0px)" }}
-                    transition={{ delay:0.6, duration: 1.5 }}
+                    transition={{ delay:1.6, duration: 1.5 }}
                     className="flex gap-5 ">
                   <motion.button
                       className=" flex items-center gap-2 text-sm font-medium text-secondary hover:bg-accent hover:text-accent-foreground px-3 py-2 transition rounded-3xl"
@@ -95,7 +101,7 @@ export default function HeroSection() {
                       </motion.div>
                   </motion.button>
                   <Button
-                      className=" flex items-center gap-2 text-sm font-medium text-secondary hover:bg-accent hover:text-accent-foreground px-3 py-2 transition rounded-3xl"
+                      className=" flex items-center gap-2 text-sm font-medium text-secondary bg-backdrop hover:bg-accent hover:text-accent-foreground px-3 py-2 transition rounded-3xl"
                   >
                     See Demo
                     

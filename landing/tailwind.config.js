@@ -29,10 +29,12 @@ export default {
         full: "9999px",
       },
       backgroundImage: {
+        hero:"url('/pexels-cottonbro-9665185.jpg')",
         gradientHeading: 'linear-gradient(to top right, #FC466B, #3F5EFB)',
         gradientDark: 'linear-gradient(to top right, #000000, #232526)',
         gradientDarkReverse: 'linear-gradient(to right, #434343, #000000)',
         gradientDarkTransparent: 'linear-gradient(to right, #000000, #43434380)',
+
       },
     },
   },
