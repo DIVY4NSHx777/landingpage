@@ -4,7 +4,7 @@ export default function TopTransition() {
     return (
         <motion.svg 
             width="475" 
-            height="1100" 
+            height="1270" 
             viewBox="0 0 971 581" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ export default function BottonTransition() {
     viewBox="0 0 525 832"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute top-0 left-0 translate-x-[-6px] translate-y-[6px] will-change-transform pointer-events-none z-0"
+    className="absolute top-0 left-0 translate-x-[-6px] translate-y-[6px] "
 
   >
     <defs>

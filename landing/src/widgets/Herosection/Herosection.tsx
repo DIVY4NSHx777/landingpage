@@ -2,8 +2,8 @@ import {Button} from "@/components/ui/button"
 import {motion} from "framer-motion"
 import { ArrowRight, ChevronRight} from "lucide-react";
 import { useState } from "react";
-import BottonTransition from "./BottonTransition";
-import TopTransition from "./TopTransition";
+import BottonTransition from "./Transitions/BottonTransition";
+import TopTransition from "./Transitions/TopTransition";
 import LandingDashboard from "./LandingDashboard/LandingDashboard";
 export default function HeroSection() {
     const [hovered, setHovered] = useState(false);
@@ -14,7 +14,7 @@ export default function HeroSection() {
         <nav className="max-w-6xl mx-auto flex items-center justify-between px-6">
           <h1 className="text-2xl font-bold text-rose-600">Aurora</h1>
           <ul className="flex gap-6 text-gray-700 font-medium">
-            <li className="hover:text-rose-600 cursor-pointer transition">Features</li>
+            <li className="text-muted-foreground hover:text-slate-100">Features</li>
             <li className="hover:text-rose-600 cursor-pointer transition">Solutions</li>
             <li className="hover:text-rose-600 cursor-pointer transition">Pricing</li>
           </ul>
@@ -50,18 +50,18 @@ export default function HeroSection() {
             }}
               initial="hidden"
               animate="visible"
-              className="relative flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-8   ">
+              className="relative flex flex-col items-center justify-center text-center min-h-screen  px-6 pt-32 md:pt-40 lg:pt-48   ">
 
             <TopTransition/>
 
-            <motion.h1 className="text-6xl font-semibold bg-gradient-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
+            <motion.h1 className="text-6xl font-semibold bg-linear-to-tr from-[#FC466B] to-[#3F5EFB] bg-clip-text text-transparent mb-4 leading-tight max-w-3xl mx-auto"
                 initial={{ opacity: 0, filter:"blur(12px)" }}
                 animate={{ opacity: 1, filter:"blur(0px)" }}
                 transition={{ delay:0.2, duration: 1 }}
             >
               Own your presence in the age of AI answers.
             </motion.h1>
-            <motion.p className="text-lg bg-gradient-to-tr from-[#FC5C7D] to-[#6A82FB]  bg-clip-text text-transparent mb-8 max-w-2xl"
+            <motion.p className="text-lg bg-linear-to-tr from-[#FC5C7D] to-[#6A82FB]  bg-clip-text text-transparent mb-8 max-w-2xl"
                 initial={{ opacity: 0, filter:"blur(10px)" }}
                 animate={{ opacity: 1, filter:"blur(0px)" }}
                 transition={{ delay:0.4, duration: 1.5 }}
