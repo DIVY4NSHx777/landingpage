@@ -15,9 +15,7 @@ export default function ProblemsectionCards({
 }: ProblemsectionCardsProps) {
   return (
     <div className="relative group w-[260px] h-[380px]">
-      
-      <div className="absolute inset-0 rounded-2xl -z-10 opacity-60 blur-xl bg-gradientHeading transition-all duration-500 group-hover:opacity-90"></div>
-      
+      <div className="absolute inset-0 rounded-2xl -z-10 opacity-60 blur-xl bg-gradientHeading transition-all duration-500 group-hover:opacity-90"/>
       <Card className="bg-cards rounded-3xl p-6 w-full h-full flex flex-col justify-start text-center border border-black backdrop-blur-sm transition-transform duration-300 group-hover:scale-[1.03]">
         <CardContent className="flex flex-col items-center text-center px-0 py-8">
           <Icon 
