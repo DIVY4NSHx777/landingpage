@@ -107,8 +107,8 @@ export default function HeroSection() {
                   </Button>
               </motion.div>
                  <BottonTransition/>
-                 <div className="w-max h-max max-w-2xl mt-8">
-                    <img src="/dashboard (1).webp" alt="" />
+                 <div className="w-max h-max max-w-2xl mt-8 rounded-2xl">
+                    <img src="/dashboard (1).webp" alt="" className="w-full h-full object-cover rounded-2xl"/>
                  </div>
       </motion.section>
     </>

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export default function TopTransition() {
     return (
         <motion.svg 
-            width="375" 
-            height="300" 
+            width="315" 
+            height="280" 
             viewBox="0 0 971 581" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
