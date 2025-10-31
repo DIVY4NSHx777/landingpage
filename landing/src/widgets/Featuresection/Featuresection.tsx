@@ -8,7 +8,7 @@ export default function Featuresection() {
                      }}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.8 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="py-16 md:py-24 bg-black"
         >
             <div className="max-w-7xl mx-auto px-6">
@@ -35,6 +35,7 @@ export default function Featuresection() {
                     image="/trackvisib.png"/>
                 
             </div>
+            
         </motion.section>
     )
 }

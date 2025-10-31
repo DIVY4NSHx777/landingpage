@@ -31,20 +31,34 @@ export default {
         full: "9999px",
       },
       backgroundImage: {
-        hero:"url('/pexels-cottonbro-9665185.jpg')",
+        hero: "url('/pexels-cottonbro-9665185.jpg')",
         cards: "linear-gradient(to bottom, #000000, #000000)",
-        gradientHeading: 'linear-gradient(to right, #ADA996,#F2F2F2,#DBDBDB,#EAEAEA )',
-        gradientProblemCards: 'linear-gradient(to top left, #0f0c29,#302b63,#24243e )',
-        gradientFeature: 'linear-gradient(to top left, #0f0c29,#302b63,#24243e )',
+        gradientHeading: 'linear-gradient(to right, #ADA996,#F2F2F2,#DBDBDB,#EAEAEA)',
+        gradientProblemCards: 'linear-gradient(to top left, #0f0c29,#302b63,#24243e)',
+        gradientFeature: 'linear-gradient(to top left, #0f0c29,#302b63,#24243e)',
         gradientDark: 'linear-gradient(to top right, #000000, #232526)',
         gradientDarkReverse: 'linear-gradient(to right, #434343, #000000)',
         gradientDarkTransparent: 'linear-gradient(to right, #000000, #43434380)',
-
+        
       },
       boxShadow: {
-        glow: "0 0 20px rgba(255, 0, 127, 0.6)", // pink glow
-        soft: "0 4px 30px rgba(0, 0, 0, 0.1)", // soft UI shadow
-        card: "0 0 20px rgba(0, 0, 0, 0.3)", // for dark cards
+        glow: "0 0 20px rgba(255, 0, 127, 0.6)",
+        soft: "0 4px 30px rgba(0, 0, 0, 0.1)",
+        card: "0 4px 20px -5px rgba(0, 0, 0, 0.2)",
+        cardHover: "0 8px 30px -5px rgba(0, 0, 0, 0.3), 0 0 15px -3px rgba(99, 102, 241, 0.2)",
+        inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)'
+      },
+      borderColor: {
+        card: 'rgba(255, 255, 255, 0.05)',
+        cardHover: 'rgba(99, 102, 241, 0.3)'
+      },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px',
+        DEFAULT: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '24px',
       },
     },
   },
